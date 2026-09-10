@@ -19,9 +19,9 @@ button, input { font: inherit; }
 button { color: inherit; }
 button:focus-visible, input:focus-visible, .focusable:focus { outline: 3px solid var(--blue); outline-offset: 3px; }
 
-.login-screen { min-height: 100vh; display: flex; background: #070b14; }
-.login-art { width: 48%; min-height: 100vh; background: linear-gradient(90deg, rgba(7,11,20,.1), #070b14), url('https://images.unsplash.com/photo-1534447677768-be436bb09401?auto=format&fit=crop&w=1400&q=80') center/cover; }
-.login-panel { width: 52%; max-width: 650px; display: flex; flex-direction: column; justify-content: center; padding: 72px clamp(36px, 8vw, 120px); }
+.login-screen { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #070b14; padding: 32px 20px; }
+.login-panel { width: min(100%, 430px); display: flex; flex-direction: column; padding: 44px; border: 1px solid rgba(255,255,255,.08); border-radius: 14px; background: rgba(15,22,37,.72); box-shadow: 0 24px 80px rgba(0,0,0,.28); }
+.login-panel > .brand-mark { align-self: center; margin-bottom: 46px; }
 .brand-mark { display: inline-flex; align-items: center; gap: 10px; font-size: 20px; font-weight: 700; letter-spacing: -.04em; color: #fff; }
 .brand-ring { width: 30px; height: 30px; display: grid; place-items: center; border: 2px solid var(--blue); border-radius: 50%; color: var(--blue); font-size: 16px; font-weight: 800; }
 .brand-accent { color: var(--blue); }
@@ -108,9 +108,8 @@ input::placeholder { color: #64748b; }
 .player-progress span { display: block; width: 38%; background: var(--blue); height: 100%; }
 
 @media (max-width: 760px) {
-  .login-art { display: none; }
-  .login-panel { width: 100%; padding: 44px 28px; }
-  .login-panel .eyebrow { margin-top: 80px; }
+  .login-panel { width: 100%; padding: 32px 24px; }
+  .login-panel > .brand-mark { margin-bottom: 38px; }
   .topbar { height: auto; min-height: 70px; flex-wrap: wrap; padding: 16px 20px 8px; gap: 15px; }
   .topbar nav { order: 3; width: 100%; overflow-x: auto; gap: 22px; padding-bottom: 3px; }
   .nav-link.active:after { bottom: -8px; }
